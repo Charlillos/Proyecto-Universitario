@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Instrucciones</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;600&family=Bebas+Neue&family=Bitcount+Prop+Double:wght@100..900&family=Bungee&family=Goldman:wght@400;700&family=Jost:wght@300;600&family=Libertinus+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Fondo animado */
+    @keyframes move {
+      100% {
+        transform: translate3d(0, 0, 1px) rotate(360deg);
+      }
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+    }
+
+    .background {
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      background: #4CB8B6;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .ball {
+      position: absolute;
+      width: 20vmin;
+      height: 20vmin;
+      border-radius: 50%;
+      backface-visibility: hidden;
+      animation: move linear infinite;
+    }
+
+    .ball:nth-child(odd) {
+      color: #006D5B;
+    }
+
+    .ball:nth-child(even) {
+      color: #FF6F61;
+    }
+
+    .ball:nth-child(1) { top: 77%; left: 88%; animation-duration: 40s; animation-delay: -3s; transform-origin: 16vw -2vh; box-shadow: 40vmin 0 5.7vmin currentColor; }
+    .ball:nth-child(2) { top: 42%; left: 2%; animation-duration: 53s; animation-delay: -29s; transform-origin: -19vw 21vh; box-shadow: -40vmin 0 5.2vmin currentColor; }
+    .ball:nth-child(3) { top: 28%; left: 18%; animation-duration: 49s; animation-delay: -8s; transform-origin: -22vw 3vh; box-shadow: 40vmin 0 5.2vmin currentColor; }
+    .ball:nth-child(4) { top: 50%; left: 79%; animation-duration: 26s; animation-delay: -21s; transform-origin: -17vw -6vh; box-shadow: 40vmin 0 5.3vmin currentColor; }
+    .ball:nth-child(5) { top: 46%; left: 15%; animation-duration: 36s; animation-delay: -40s; transform-origin: 4vw 0vh; box-shadow: -40vmin 0 6vmin currentColor; }
+    .ball:nth-child(6) { top: 77%; left: 16%; animation-duration: 31s; animation-delay: -10s; transform-origin: 18vw 4vh; box-shadow: 40vmin 0 5.2vmin currentColor; }
+    .ball:nth-child(7) { top: 22%; left: 17%; animation-duration: 55s; animation-delay: -6s; transform-origin: 1vw -23vh; box-shadow: -40vmin 0 5.7vmin currentColor; }
+    .ball:nth-child(8) { top: 41%; left: 47%; animation-duration: 43s; animation-delay: -28s; transform-origin: 25vw -3vh; box-shadow: 40vmin 0 5.2vmin currentColor; }
+
+    /* Texto y contenido */
+    .content {
+      position: relative;
+      z-index: 1;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    h1 {
+      font-family: "Bitcount Prop Double", sans-serif;
+      color: blueviolet;
+      font-weight: 1000;
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    h2 {
+      font-family: "Goldman", sans-serif;
+      font-weight: 850;
+      color: aquamarine;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    ol {
+      margin: 0 auto 2rem;
+      padding: 0;
+      list-style-position: inside;
+      max-width: 400px;
+    }
+
+    li {
+      font-family: "Libertinus Sans", sans-serif;
+      font-weight: 450;
+      color: rgb(248, 7, 7);
+      font-size: 1.2rem;
+      margin-bottom: 0.6rem;
+    }
+
+    button {
+      padding: 0.8rem 1.6rem;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 8px;
+      background-color: #FF6F61;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #e5584f;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Fondo animado -->
+  <div class="background">
+    <div class="ball"></div>
+    <div class="ball"></div>
+    <div class="ball"></div>
+    <div class="ball"></div>
+    <div class="ball"></div>
+    <div class="ball"></div>
+    <div class="ball"></div>
+    <div class="ball"></div>
+  </div>
+
+  <!-- Contenido encima del fondo -->
+  <div class="content">
+    <h1>Bienvenidos a nuestro menú de Instrucciones</h1>
+    <h2>Aquí aprenderá a cómo utilizar el planificador</h2>
+    <ol>
+      <li>Agrega una materia</li>
+      <li>Guardar tareas</li>
+      <li>Revisar prioridad</li>
+      <li>Marcar como entregada</li>
+    </ol>
+    <a href="plan.html"><button>Comenzar</button></a>
+  </div>
+</body>
+</html>
