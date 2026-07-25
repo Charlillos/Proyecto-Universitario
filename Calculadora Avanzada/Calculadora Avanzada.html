@@ -316,12 +316,10 @@ font-family: "Goldman", sans-serif;
   }
 
   function mostrarFormularioCalculo(tipo) {
-    // Oculta todos los formularios primero
     document.getElementById("form-t").style.display = "none";
     document.getElementById("form-d").style.display = "none";
     document.getElementById("form-v").style.display = "none";
 
-    // Muestra el formulario correspondiente
     if (tipo === 't') {
       document.getElementById("form-t").style.display = "block";
     } else if (tipo === 'd') {
@@ -330,7 +328,6 @@ font-family: "Goldman", sans-serif;
       document.getElementById("form-v").style.display = "block";
     }
 
-    // Limpia el resultado
     document.getElementById("resultadoCalculo").innerText = "";
   }
 
@@ -367,10 +364,6 @@ font-family: "Goldman", sans-serif;
     document.getElementById("resultadoCalculo").innerText = `La velocidad es ${v.toFixed(2)} km/h.`;
   }
 </script>
-
-</body>
-</html>
-  </script>
 
 </body>
 </html>
